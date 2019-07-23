@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Junaid Khalid</title>
+    <title>{{ blog.title }}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -44,15 +44,29 @@
       <a class="nav-item nav-link" href="https://www.linkedin.com/in/junaidkhalid22/">LinkedIn</a>
       <a class="nav-item nav-link" href="{% static 'junaid_resume.pdf' %}">Resume</a>
       <a class="nav-item nav-link" href="https://www.github.com/mkhalid1">Github</a>
-      <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+      <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
     </div>
   </div>
 </nav>
 </header>
 
 <main role="main">
+	<div class="container">
 
-  <section class="jumbotron text-center">
+
+
+		<h1 class="text-center pt-3">{{ blog.title }}</h1>
+		<p class="text-center">{{blog.pub_date}}</p>
+		<img class="img-fluid" src="{{ blog.image.url}}" align="center">
+		<br>
+		<br>
+		{{blog.summary}}
+		<br>
+
+
+	</div>
+
+  <!-- <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">Hi, I'm Junaid.</h1>
       <p class="lead text-muted">I'm a Data Science Enthusiast with a focus on Machine Learning, currently pursuing a Bachelors degree
@@ -60,11 +74,10 @@
       <p>
         <a href="mailto:mkhalid.bese16seecs@seecs.edu.pk" class="btn btn-primary my-2">Email Me</a>
       </p>
-      <img src="{% static 'junaid_khalid.jpg' %}" height="300" width="300">
     </div>
-  </section>
+  </section> -->
 
-  <div class="album py-5 bg-light">
+<!--   <div class="album py-5 bg-light">
     <div class="container">
 
       <div class="row">
@@ -83,7 +96,7 @@
 
       </div>
     </div>
-  </div>
+  </div> -->
 
 </main>
 
